@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="css.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic" rel="stylesheet" type="text/css">
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+</head>
+<body>
+<section>
+  <a href="#"><i class="fa fa-code icon"></i></a><br><br>
+  <h1>PARAMETER PASSED!</h1>
+  <p>Perfect! That worked great.</p>
+  <p>If you look in your URL you'll see that we passed <em style="color:#1EA6FD;">'?test=abc'</em> into our sites URL. Using this script we're able to find it, and depending on it's value, do something with it.</p>
+  
+  <div id="btn-group">
+    <a class="btn" href="index.html">Go Back!</a>
+    <a class="link" href="#">Download on GitHub</a>
+  </div>
+  
+  <br><br>
+  <a href="#"><i class="fa fa-github icon"></i></a>
+  <a href="#" class="link dwm">danielmdesigns.com</a>
+</section>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script>
+
+function wmParameter(findParam){
+  var pageURL = window.location.search.substring(1);
+  var splitURL = pageURL.split('&');
+  for (var i = 0; i < splitURL.length; i++){
+	var paramName = splitURL[i].split('=');
+	if (paramName[0] === findParam){
+	  return paramName[1];
+	}
+  }
+}   
+
+var thisParameter = wmParameter("test");
+
+if (thisParameter === "abc"){
+  alert("The parameter of '" + thisParameter + "' was passed to this page successfully!");
+  //$("element").method("property"); 
+}else{
+  alert("There is no parameter to display.");
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="css.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic" rel="stylesheet" type="text/css">
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+</head>
+<body>
+<section>
+  <a href="#"><i class="fa fa-code icon"></i></a><br><br>
+
+  <h1>WHAT'S MY PARAMETER?</h1>
+  <p>Need to read, find and get parameter value(s) from a URL string of a current page and/or email newsletter to be able to perform some type of action? We'll here ya go...</p>
+
+  <div id="btn-group">
+  	<a class="btn" href="page2.html?test=abc"><i class="fa fa-play"></i> &nbsp; Example</a>
+  	<a class="link" href="#">Download on GitHub</a>
+  </div>
+
+  <section id="install-section">
+    <h2>INSTALL</h2>
+    <p>To install, add the below code into the page(s) you wish to collect parameter data on.</p>
+    
+    <br>
+    
+    <p>1. Install jQuery onto the page(s) where you need to provide an action.</p>
+    <div class="code--block">
+      <div class="black">&lt;</div><div class="blue">script </div><div class="orange">src</div><div class="black">=</div><div class="green">"https://code.jquery.com/jquery-2.2.0.min.js"</div><div class="black">&gt;&lt;</div><div class="blue">/script</div><div class="black">&gt;</div>
+    </div>
+    
+    <br>
+    
+     <p>2. Now copy&paste the wmParameter</p>
+    <div class="code--block">
+      <div class="purple">function </div><div class="orange">wmParameter</div><div class="black">(</div><div class="orange">findParam</div><div class="black">){</div>
+      <br>
+      <div class="purple">&nbsp; var </div><div class="orange">pageURL </div><div class="black">=</div><div class="blue"> window</div><div class="black">.location.search.substring(<div class="red">1</div>);</div>
+      <br>
+      <div class="purple">&nbsp; var </div><div class="orange">splitURL </div><div class="black">=</div><div class="blue"> pageURL</div><div class="black">.split(<div class="green">'&amp;'</div>);</div>
+      <br>
+      <div class="purple">&nbsp; for</div><div class="black">(</div><div class="purple">var</div><div class="orange"> i </div><div class="black"> = </div><div class="red">0</div><div class="black">;</div><div class="blue"> i</div><div class="black"> &lt; </div><div class="blue">splitURL</div><div class="black">.length;</div><div class="blue"> i</div><div class="black">++){</div>
+      <br>
+      <div class="purple">&nbsp; &nbsp; var</div><div class="orange"> paramName</div><div class="black">=</div><div class="blue"> splitURL</div><div class="black">[</div><div class="blue">i</div><div class="black">].split(</div><div class="green">'='</div><div class="black">);</div>
+      <br>
+      <div class="purple">&nbsp; &nbsp; if</div><div class="black">(</div><div class="blue">paramName</div><div class="black">[</div><div class="red">0</div><div class="black">] ===</div><div class="blue"> findParam</div><div class="black">){</div>
+      <br>
+      <div class="purple">&nbsp; &nbsp; &nbsp; return</div><div class="blue"> paramName</div><div class="black">[</div><div class="red">1</div><div class="black">];</div>
+      <br>
+      <div class="black">&nbsp; &nbsp; }</div>
+      <br>
+      <div class="black">&nbsp; }</div>
+      <br>
+      <div class="black">}</div>
+      <br><br>
+      <div class="purple">var </div><div class="orange">thisParameter </div><div class="black">=</div><div class="blue"> wmParameter</div><div class="black">(<div class="green">"test"</div>);</div>
+      <br><br>
+      <div class="purple">if </div><div class="black">(</div><div class="blue">thisParameter</div><div class="black"> === </div><div class="green">"abc"</div><div class="black">){</div>
+      <br>
+      <div class="blue">&nbsp; alert</div><div class="black">(</div><div class="green">"The parameter of '"</div><div class="black"> + </div><div class="blue">thisParameter</div><div class="black"> + </div><div class="green">"' was passed to this page successfully!"</div><div class="black">);</div>
+      <br>
+      <div class="black">}<div class="purple">else</div>{</div>
+      <br>
+      <div class="blue">&nbsp; alert</div><div class="black">(</div><div class="green">"There is no paramter to display."</div><div class="black">);</div>
+      <br>
+      <div class="black">}</div>
+    </div>
+    
+    <br>
+    
+    <p>3. If your alert's are successful, replace with your jQuery action.</p>
+    <div class="code--block">
+      <div class="blue">$</div><div class="black">(<div class="green">"element"</div>).method(<div class="green">"property"</div>);</div>
+    </div>
+  </section>
+
+<a href="#"><i class="fa fa-github icon"></i></a>
+<a href="#" class="link dwm">danielmdesigns.com</a>
+</section>
+</body>
+</html>
