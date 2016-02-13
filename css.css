@@ -28,6 +28,12 @@ p{
 	line-height: 30px;
 	letter-spacing: 1px;
 }
+.step-heading{
+	color: #FFF;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+}
 i.icon{
 	font-size: 40px;
 	color: #1EA6FD;
@@ -89,6 +95,7 @@ a.link.dwm{
 	border-radius: 5px;
 	padding: 20px;
 	font-family: monospace;
+	margin-bottom: 50px;
 }
 .blue{color: blue; display: inline;}
 .green{color: green; display: inline;}
