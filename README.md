@@ -28,9 +28,9 @@ function wmParameter(findParam){
 var thisParameter = wmParameter("test"); 
 
 if (thisParameter === "abc"){ 
-  alert("The parameter of '" + thisParameter + "' was passed to this page successfully!"); 
+  alert(thisParameter); 
 }else{ 
-  alert("There is no paramter to display."); 
+  alert("null"); 
 }
 ```
 
