@@ -10,8 +10,13 @@ Need to read, find and get parameter value(s) from a URL string of a current pag
 ```
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 ```
+2: Add a parameter to the end of your URL. This can be anything that you want to reference.
+```
+www.thisismysite.com?addParameter="abc123"
+```
 
-2: Now copy&paste the wmParameter
+
+3: Now copy&paste the wmParameter
 
 ```
 function wmParameter(findParam){ 
@@ -25,9 +30,9 @@ function wmParameter(findParam){
   } 
 } 
 
-var thisParameter = wmParameter("test"); 
+var thisParameter = wmParameter("abc123"); 
 
-if (thisParameter === "abc"){ 
+if (thisParameter === "abc123"){ 
   alert(thisParameter); 
 }else{ 
   alert("null"); 
