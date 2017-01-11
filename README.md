@@ -10,9 +10,12 @@ Need to read, find and get parameter value(s) from a URL string of a current pag
 ```
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 ```
-2: Add a parameter to the end of your URL. This can be anything that you want to reference.
+
+
+2: Add a parameter to the end of your URL. This can be anything that you want to reference. For example;
+
 ```
-www.thisismysite.com?addParameter="abc123"
+<a href="www.thisismysite.com?addParameter=abc123" target="_blank">My Hyperlink Example</a>
 ```
 
 
