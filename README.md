@@ -42,7 +42,7 @@ if (thisParameter === "abc123"){
 }
 ```
 
-3: If your alert's are successful, replace with your jQuery action.
+4: If your alert's are successful, replace with your jQuery action.
 
 ```
 $("element").method("property");
