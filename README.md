@@ -33,7 +33,7 @@ function wmParameter(findParam){
   } 
 } 
 
-var thisParameter = wmParameter("abc123"); 
+var thisParameter = wmParameter("addParameter"); 
 
 if (thisParameter === "abc123"){ 
   alert(thisParameter); 
